@@ -23,11 +23,11 @@
   <include file="$(find my_robot)/launch/robot_description.launch"/>
 
   <!-- Find my robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find my_robot)/urdf/robot1.xacro'"/>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find my_robot)/urdf/my_robot.xacro'"/>
 
   <!-- Spawn my robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-    args="-urdf -param robot_description -model robot1
+    args="-urdf -param robot_description -model my_robot
           -x $(arg x) -y $(arg y) -z $(arg z)
           -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
 
