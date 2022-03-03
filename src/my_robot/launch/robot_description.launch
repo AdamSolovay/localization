@@ -1,7 +1,7 @@
 <launch>
 
   <!-- send urdf to param server -->
-  <param command="$(find xacro)/xacro --inorder '$(find my_robot)/urdf/robot1.xacro'" name="robot_description" />
+  <param command="$(find xacro)/xacro --inorder '$(find my_robot)/urdf/my_robot.xacro'" name="robot_description" />
 
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
     <param name="use_gui" value="false"/>
